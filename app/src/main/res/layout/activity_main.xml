@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="sharma.yateesh.cloudinary_app.MainActivity">
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:id="@+id/relativeLayout">
+
+    <ImageView
+        android:id="@+id/movieImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <!--<include layout="@layout/content_main"  />-->
+
+    <Button
+        android:text="camera image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_img_cam"
+        android:layout_above="@+id/btn_vi_cam"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="gellery image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_img_gell"
+        android:layout_marginRight="41dp"
+        android:layout_marginEnd="41dp"
+        android:layout_above="@+id/btn_video_gell"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="gellery video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_video_gell"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/btn_img_gell"
+        android:layout_alignStart="@+id/btn_img_gell" />
+
+    <ProgressBar
+        android:id="@+id/progressBar12"
+        style="?android:attr/progressBarStyleInverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:indeterminateDrawable="@drawable/progress"/>
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_img_gell"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="11dp"
+        android:id="@+id/btn_1" />
+
+    <Button
+        android:text="camera video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_vi_cam"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/btn_img_cam"
+        android:layout_alignEnd="@+id/btn_img_cam" />
+
+    <!--<ProgressBar-->
+
+        <!--android:id="@+id/progressBarHorizontal"-->
+        <!--style="?android:attr/progressBarStyleHorizontal"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:visibility="visible"-->
+        <!--android:layout_below="@+id/relativeLayout"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/txt_1"
+        android:textSize="15sp"
+        android:layout_above="@+id/btn_1"
+        android:layout_alignLeft="@+id/btn_vi_cam"
+        android:layout_alignStart="@+id/btn_vi_cam"
+        android:layout_marginBottom="11dp" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/txt_2"
+        android:textSize="15sp"
+        android:layout_above="@+id/btn_img_cam"
+        android:layout_alignLeft="@+id/txt_1"
+        android:layout_alignStart="@+id/txt_1" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/txt_3"
+        android:textSize="15sp"
+        android:layout_alignBottom="@+id/btn_1"
+        android:layout_alignLeft="@+id/btn_img_gell"
+        android:layout_alignStart="@+id/btn_img_gell" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:minHeight="60dp"
+        android:minWidth="220dp"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_alignLeft="@+id/txt_1"
+        android:layout_alignStart="@+id/txt_1" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text Here"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_alignBottom="@+id/txt_1"
+        android:layout_alignRight="@+id/btn_video_gell"
+        android:layout_alignEnd="@+id/btn_video_gell" />
+
+
+</RelativeLayout>
