@@ -9,16 +9,12 @@ import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.media.ThumbnailUtils;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.StrictMode;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
-import android.provider.Settings;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -27,27 +23,18 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.Map;
-
-import sharma.yateesh.cloudinary_app.mCloud.CloudinaryClient;
-import sharma.yateesh.cloudinary_app.mCloud.MyConfiguration;
-import sharma.yateesh.cloudinary_app.mPicasso.PicassoClient;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -299,9 +286,9 @@ public class MainActivity extends AppCompatActivity {
     public static void uploader(InputStream fileInputStream) {
         Log.d("requestCode : ", "get in");
         Map config = new HashMap();
-        config.put("cloud_name", "ddlo5lzpt");
-        config.put("api_key", "675358991995299");
-        config.put("api_secret", "nsjPjOjECT8bUyQYaGaFm54UhKw");
+        config.put("cloud_name", "*******");
+        config.put("api_key", "*********");
+        config.put("api_secret", "***********");
         Cloudinary cloudinary = new Cloudinary(config);
         int SDK_INT = android.os.Build.VERSION.SDK_INT;
         if (SDK_INT > 8) {
@@ -350,9 +337,9 @@ public class MainActivity extends AppCompatActivity {
     public static void uploader2(ByteArrayInputStream fileInputStream) {
         Log.d("requestCode : ", "get in");
         Map config = new HashMap();
-        config.put("cloud_name", "ddlo5lzpt");
-        config.put("api_key", "675358991995299");
-        config.put("api_secret", "nsjPjOjECT8bUyQYaGaFm54UhKw");
+        config.put("cloud_name", "******");
+        config.put("api_key", "********");
+        config.put("api_secret", "**********");
         Cloudinary cloudinary = new Cloudinary(config);
         int SDK_INT = android.os.Build.VERSION.SDK_INT;
         if (SDK_INT > 8) {
@@ -362,7 +349,8 @@ public class MainActivity extends AppCompatActivity {
             //your codes here
             try {
                 //  cloudinary.uploader().upload(photoFile.getAbsolutePath(),          Cloudinary.emptyMap());
-                Map<String, String> m = cloudinary.uploader().upload(fileInputStream, ObjectUtils.emptyMap());
+             //   Map<String, String> m = cloudinary.uploader().upload(fileInputStream, ObjectUtils.emptyMap());
+                Map<String, String> m = cloudinary.uploader().uploadLarge(fileInputStream, ObjectUtils.emptyMap());
                 //   cloudinary.uploader().upload(bs,ObjectUtils.asMap("public_id", publicId, "signature", signature, "timestamp", timestamp, "api_key", api_key));
                 //  cloudinary.uploader().unsignedUpload(bs,"yo",ObjectUtils.emptyMap());
                 // UploadPhotoActivity u=new UploadPhotoActivity();
